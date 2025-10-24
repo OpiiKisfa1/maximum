@@ -1,39 +1,56 @@
+import React from 'react';
+
 function App() {
+  const [scrollY, setScrollY] = React.useState(0);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const heroHeight = typeof window !== 'undefined' ? window.innerHeight : 1000;
+  const maxParallax = heroHeight * 0.8;
+  const parallaxOffset = Math.min(scrollY * 0.5, maxParallax);
+
   return (
     <div className="min-h-screen bg-black text-[#3fb3a9] font-mono">
-      <div
-        className="fixed top-0 left-0 w-full h-screen bg-cover bg-center opacity-30 blur-sm pointer-events-none"
-        style={{
-          backgroundImage: 'url(/download%20(2).png)',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundAttachment: 'scroll'
-        }}
-      ></div>
-
-      <div className="relative z-10">
-        <nav className="py-4 px-8 bg-black">
-          <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <div className="text-xl font-bold">CTRA$H</div>
-            <div className="flex gap-8 text-sm">
-              <a href="#about" className="hover:text-white transition-colors">About</a>
-              <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
-              <a href="#tokenomics" className="hover:text-white transition-colors">Tokenomics</a>
-              <a href="#roadmap" className="hover:text-white transition-colors">Roadmap</a>
-              <a href="#community" className="hover:text-white transition-colors">Community</a>
-              <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
-            </div>
+      <nav className="py-4 px-8 bg-black relative z-20">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="text-xl font-bold">CTRA$H</div>
+          <div className="flex flex-wrap gap-4 md:gap-8 text-sm justify-center">
+            <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
+            <a href="#tokenomics" className="hover:text-white transition-colors">Tokenomics</a>
+            <a href="#roadmap" className="hover:text-white transition-colors">Roadmap</a>
+            <a href="#community" className="hover:text-white transition-colors">Community</a>
+            <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
           </div>
-        </nav>
+        </div>
+      </nav>
 
-        <div className="min-h-screen flex flex-col items-center justify-center p-8">
-        <div className="w-full max-w-5xl mb-12">
+        <div className="min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(/download.png)',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            filter: 'blur(3px)',
+            opacity: 0.3,
+            transform: `translateY(${parallaxOffset}px)`,
+          }}
+        />
+        <div className="w-full max-w-5xl mb-12 relative z-10">
           <div className="border border-[#3fb3a9] px-8 py-4 text-center">
             <div className="text-sm">Mint Address: So1aNaTokeNAddR3sS123abcXYZ</div>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-16 max-w-6xl">
+        <div className="flex flex-col md:flex-row items-center gap-16 max-w-6xl relative z-10">
           <img
             src="/image_scaled_4x_pngcrushed.png"
             alt="CashTrash Mascot"
@@ -68,12 +85,11 @@ function App() {
           </div>
         </section>
 
-        <footer className="py-6 px-8 bg-black">
-          <div className="max-w-7xl mx-auto text-center text-xs text-[#3fb3a9]/60">
-            <p>DISCLAIMER: CashTrash is a concept project. This is not financial advice. Cryptocurrency investments carry risk. Do not invest more than you can afford to lose. DYOR.</p>
-          </div>
-        </footer>
-      </div>
+      <footer className="py-6 px-8 bg-black">
+        <div className="max-w-7xl mx-auto text-center text-xs text-[#3fb3a9]/60">
+          <p>DISCLAIMER: CashTrash is a concept project. This is not financial advice. Cryptocurrency investments carry risk. Do not invest more than you can afford to lose. DYOR.</p>
+        </div>
+      </footer>
     </div>
   );
 }
