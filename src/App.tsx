@@ -18,19 +18,23 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black text-[#3fb3a9] font-mono">
-      <nav className="py-4 px-8 bg-black relative z-20">
+      <nav className="py-4 px-8 bg-black fixed top-0 left-0 right-0 z-50">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-xl font-bold">CTRA$H</div>
-          <div className="flex flex-wrap gap-4 md:gap-8 text-sm justify-center">
-            <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
-            <a href="#about" className="hover:text-white transition-colors">About</a>
-            <a href="#tokenomics" className="hover:text-white transition-colors">Tokenomics</a>
-            <a href="#community" className="hover:text-white transition-colors">Community</a>
+          <div className="text-xl font-bold text-white flex items-center">
+            <span>CTRA</span>
+            <img src="/dollarsymbol.png" alt="$" className="w-5 h-5 pixelated" style={{ marginTop: '2px', marginLeft: '-2px', marginRight: '-2px' }} />
+            <span>H</span>
+          </div>
+          <div className="flex flex-wrap gap-4 md:gap-8 text-sm justify-center text-white">
+            <a href="#how-it-works" className="hover:text-[#3fb3a9] transition-colors">How It Works</a>
+            <a href="#about" className="hover:text-[#3fb3a9] transition-colors">About</a>
+            <a href="#tokenomics" className="hover:text-[#3fb3a9] transition-colors">Tokenomics</a>
+            <a href="#community" className="hover:text-[#3fb3a9] transition-colors">Community</a>
           </div>
         </div>
       </nav>
 
-        <div className="min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden">
+        <div className="min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden pt-24">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -43,9 +47,15 @@ function App() {
           }}
         />
         <div className="w-full max-w-5xl mb-12 relative z-10">
-          <div className="border border-[#3fb3a9] px-8 py-4 text-center">
-            <div className="text-sm">Mint Address: So1aNaTokeNAddR3sS123abcXYZ</div>
-          </div>
+          <a
+            href="https://solscan.io/token/So1aNaTokeNAddR3sS123abcXYZ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block border border-[#3fb3a9] px-8 py-4 text-center hover:bg-[#3fb3a9]/10 transition-colors group"
+            title="Go to Solscan"
+          >
+            <div className="text-sm text-white group-hover:text-[#3fb3a9] transition-colors">Mint Address: So1aNaTokeNAddR3sS123abcXYZ</div>
+          </a>
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-16 max-w-6xl relative z-10">
@@ -71,7 +81,6 @@ function App() {
                 <span className="text-[#3fb3a9] font-bold text-xl">3.</span>
                 <span className="text-white">Earn CTRA$H.</span>
               </div>
-              <p className="mt-6 text-[#3fb3a9] text-xl">Turn real-world recycling into on-chain degen gains.</p>
             </div>
           </div>
         </div>
@@ -79,16 +88,16 @@ function App() {
 
         <section id="how-it-works" className="min-h-screen bg-black py-20 px-8">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-5xl font-bold text-center mb-16">How It Works</h2>
+            <h2 className="text-5xl font-bold text-center mb-16 text-white">How It Works</h2>
 
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold mb-4">Two Ways to Get CTRA$H:</h3>
+              <h3 className="text-3xl font-bold mb-4 text-white">Two Ways to Get CTRA$H:</h3>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 mb-16">
               <div className="border border-[#3fb3a9] p-8">
-                <div className="text-4xl mb-4">1. Buy on Pump.fun 🚀</div>
-                <p className="text-lg mb-6 text-[#3fb3a9]/80">
+                <div className="text-4xl mb-4 text-white">1. Buy on Pump.fun</div>
+                <p className="text-lg mb-6 text-white">
                   Ready to join the movement? Head over to Pump.fun and grab your tokens instantly.
                   Connect your wallet, swap your SOL, and you're part of the plastic-fighting revolution.
                 </p>
@@ -98,37 +107,37 @@ function App() {
               </div>
 
               <div className="border border-[#3fb3a9] p-8">
-                <div className="text-4xl mb-4">2. Recycle & Earn ♻️</div>
-                <p className="text-lg mb-6 text-[#3fb3a9]/80">
+                <div className="text-4xl mb-4 text-white">2. Recycle & Earn</div>
+                <p className="text-lg mb-6 text-white">
                   Turn your empty bottles into crypto! Here's how easy it is:
                 </p>
                 <div className="space-y-4 text-left">
                   <div className="flex items-start gap-4">
-                    <span className="text-2xl font-bold">Step 1:</span>
+                    <span className="text-2xl font-bold text-[#3fb3a9]">Step 1:</span>
                     <div>
-                      <div className="font-bold text-lg">Find Bottle</div>
-                      <div className="text-[#3fb3a9]/80">Gather your plastic bottles</div>
+                      <div className="font-bold text-lg text-white">Find Bottle</div>
+                      <div className="text-white/70">Gather your plastic bottles</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <span className="text-2xl font-bold">Step 2:</span>
+                    <span className="text-2xl font-bold text-[#3fb3a9]">Step 2:</span>
                     <div>
-                      <div className="font-bold text-lg">Find a Partner Location</div>
-                      <div className="text-[#3fb3a9]/80">Locate a verified recycling drop-off point near you using our map</div>
+                      <div className="font-bold text-lg text-white">Find a Partner Location</div>
+                      <div className="text-white/70">Locate a verified recycling drop-off point near you using our map</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <span className="text-2xl font-bold">Step 3:</span>
+                    <span className="text-2xl font-bold text-[#3fb3a9]">Step 3:</span>
                     <div>
-                      <div className="font-bold text-lg">Scan & Verify</div>
-                      <div className="text-[#3fb3a9]/80">Scan your solana account</div>
+                      <div className="font-bold text-lg text-white">Scan & Verify</div>
+                      <div className="text-white/70">Scan your solana account</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <span className="text-2xl font-bold">Step 4:</span>
+                    <span className="text-2xl font-bold text-[#3fb3a9]">Step 4:</span>
                     <div>
-                      <div className="font-bold text-lg">Receive Tokens</div>
-                      <div className="text-[#3fb3a9]/80">Tokens are instantly sent to your wallet. Each bottle = 100 CTRA$H tokens!</div>
+                      <div className="font-bold text-lg text-white">Receive Tokens</div>
+                      <div className="text-white/70">Tokens are instantly sent to your wallet. Each bottle = 100 CTRA$H tokens!</div>
                     </div>
                   </div>
                 </div>
@@ -136,7 +145,7 @@ function App() {
             </div>
 
             <div className="text-center">
-              <h3 className="text-3xl font-bold mb-8">We are all over the world.</h3>
+              <h3 className="text-3xl font-bold mb-8 text-white">We are all over the world.</h3>
               <div className="flex justify-center">
                 <img
                   src="/locations.gif"
@@ -150,13 +159,13 @@ function App() {
 
         <section id="about" className="min-h-screen bg-black py-20 px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-5xl font-bold text-center mb-16">About</h2>
+            <h2 className="text-5xl font-bold text-center mb-16 text-white">About</h2>
 
             <div className="space-y-12">
               <div className="border border-[#3fb3a9] p-8">
                 <h3 className="text-3xl font-bold mb-4 text-white">What is CashTrash?</h3>
                 <p className="text-lg text-white">
-                  CashTrash ($CTRASH) is the memecoin that's actually doing something good. We're turning plastic bottle recycling into crypto rewards. No complicated schemes, no BS—just recycle bottles, earn tokens.
+                  CashTrash (CTRA$H) is the memecoin that's actually doing something good. We're turning plastic bottle recycling into crypto rewards. No complicated schemes, no BS—just recycle bottles, earn tokens.
                 </p>
               </div>
 
@@ -171,7 +180,7 @@ function App() {
                 <div className="border border-[#3fb3a9] p-8">
                   <h3 className="text-3xl font-bold mb-4 text-white">Our Solution</h3>
                   <p className="text-lg text-white">
-                    We're making recycling profitable. Bring your bottles to our partner drop-off points, get instant $CTRASH tokens. It's that simple.
+                    We're making recycling profitable. Bring your bottles to our partner drop-off points, get instant CTRA$H tokens. It's that simple.
                   </p>
                 </div>
               </div>
@@ -210,7 +219,7 @@ function App() {
 
         <section id="tokenomics" className="min-h-screen bg-black py-20 px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-5xl font-bold text-center mb-16">Tokenomics</h2>
+            <h2 className="text-5xl font-bold text-center mb-16 text-white">Tokenomics</h2>
 
             <div className="border border-[#3fb3a9] p-8 mb-12 bg-[#3fb3a9]/5">
               <div className="flex flex-col md:flex-row items-center gap-8">
@@ -302,10 +311,10 @@ function App() {
                   </div>
                   <p className="text-white mb-3">This cycle creates:</p>
                   <ul className="space-y-2 text-white">
-                    <li>✅ <span className="font-bold text-[#3fb3a9]">Constant buy pressure</span> - Every reward generates a market purchase</li>
-                    <li>✅ <span className="font-bold text-[#3fb3a9]">Sustainable economics</span> - Funded by real revenue, not token emissions</li>
-                    <li>✅ <span className="font-bold text-[#3fb3a9]">Environmental impact</span> - Actual plastic removed from waste streams</li>
-                    <li>✅ <span className="font-bold text-[#3fb3a9]">Holder value</span> - Market buys support price stability and growth</li>
+                    <li><span className="font-bold text-[#3fb3a9]">Constant buy pressure</span> - Every reward generates a market purchase</li>
+                    <li><span className="font-bold text-[#3fb3a9]">Sustainable economics</span> - Funded by real revenue, not token emissions</li>
+                    <li><span className="font-bold text-[#3fb3a9]">Environmental impact</span> - Actual plastic removed from waste streams</li>
+                    <li><span className="font-bold text-[#3fb3a9]">Holder value</span> - Market buys support price stability and growth</li>
                   </ul>
                 </div>
               </div>
@@ -411,9 +420,19 @@ function App() {
           </div>
         </section>
 
-        <section id="community" className="min-h-screen bg-black py-20 px-8 flex items-center justify-center">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl font-bold mb-8">Join the Community</h2>
+        <section id="community" className="min-h-screen py-20 px-8 flex items-center justify-center relative overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: 'url(/endscene.png)',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              filter: 'blur(8px)',
+              opacity: 0.4,
+            }}
+          />
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <h2 className="text-5xl font-bold mb-8 text-white">Join the Community</h2>
             <p className="text-2xl mb-12 text-white">
               Be part of the movement. Connect with fellow trash collectors and stay updated on the latest developments.
             </p>
