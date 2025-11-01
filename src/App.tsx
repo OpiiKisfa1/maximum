@@ -34,7 +34,7 @@ function App() {
         </div>
       </nav>
 
-        <div className="min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden pt-24">
+        <div className="min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden pt-32 md:pt-24">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -96,10 +96,9 @@ function App() {
 
             <div className="grid md:grid-cols-2 gap-12 mb-16">
               <div className="border border-[#3fb3a9] p-8">
-                <div className="text-4xl mb-4 text-white">1. Buy on Pump.fun</div>
+                <div className="text-4xl mb-4 text-white">1. Buy on Pump.fun (or any DEX)</div>
                 <p className="text-lg mb-6 text-white">
-                  Ready to join the movement? Head over to Pump.fun and grab your tokens instantly.
-                  Connect your wallet, swap your SOL, and you're part of the plastic-fighting revolution.
+                  Want to hold $CTRASH and benefit from the growing recycling network? Head over to Pump.fun, Raydium, or Jupiter. Connect your wallet, swap your SOL for $CTRASH, and you're in.
                 </p>
                 <button className="w-full bg-[#3fb3a9] text-black font-bold py-4 px-8 hover:bg-white transition-colors text-lg">
                   Buy Now on Pump.fun
@@ -434,7 +433,7 @@ function App() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <h2 className="text-5xl font-bold mb-8 text-white">Join the Community</h2>
             <p className="text-2xl mb-12 text-white">
-              Be part of the movement. Connect with fellow trash collectors and stay updated on the latest developments.
+              Join the community. Connect with other recyclers and stay updated on new partner locations and payout rates.
             </p>
             <a
               href="https://twitter.com"
@@ -445,7 +444,7 @@ function App() {
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
-              Follow us on Twitter
+              Follow us on X
             </a>
           </div>
         </section>
